@@ -19,7 +19,13 @@
         <img src=“C:\Users\youssef\Desktop\cap.png”>
 ![cap](https://user-images.githubusercontent.com/47403132/84211363-79f61c80-aabb-11ea-81ef-a61bdfb432b8.png)
         vous disposez finaleement d un fichier .cer
-        je vais m attarder un peu dans l exlication des commandes donc on a utilise directement l outil keytool disponible de java on peut aussi utiliser l outil PKCS12 et le convertir en keystore mais sa aura le meme resultat 
+        je vais m attarder un peu dans l exlication des commandes donc on a utilise directement l outil keytool disponible de java 
+        la premiere commande on lui demande de generer un keystore avec comme alias ou identifiant youssef on utilisant le cryptage asymetrique RSA ( ou bien le cryptage que vous allez utiliser vous cote server ) et puis l emplace ou le ficher va etre creer : son_nom.jks
+        il va vous demander aussi le password le nom que vous allez retrouvez apres sur les proprietes de votre certificat la location organisation etc ... il vous donne comme resultat un RSA 2048  bit et de 90 jours de validite par defaut notez bien que vous pouvez la modifier par ligne de commande 
+        puis pour generer le certificat vous allez utilisez la 2 eme commande en mode export vous allez preciser 
+        __le meme alias que vous avez utilisez avec la premiere commande sinon il ne la reconnait pas__        
+        le fichier ou vous voulez  mettre votre fichier et quel jks vous voulez utilisez (le jks que vous venez de cree)
+        on peut aussi utiliser l outil PKCS12 et le convertir en keystore mais sa aura le meme resultat 
         Pour les gens qui veulent utiliser PKCS12 suivez les etapes suivantes mais avant on doit comprendre ce que keystore
         Apache Tomcat et de nombreuses autres applications Java prévoient de récupérer des certificats SSL / TLS à partir de clés Java           (JKS). Les machines virtuelles Jave sont généralement fournies avec keytool pour vous aider à créer un nouveau keystore.
 
@@ -44,3 +50,17 @@ Ulv6GtdFbjzLeqlkelqwewlq822OrEPdH+zxKUkKGX/eN
 Convertissez les deux, la clé et le certificat au format DER en utilisant openssl
 les commande sont du format suivant :
  - openssl pkcs8 -topk8 -nocrypt -in key.pem -inform PEM -out key.der -outform DER
+ - openssl x509 -in cert.pem -inform PEM -out cert.der -outform DER
+ Vient maintenant la partie délicate, vous avez besoin de quelque chose pour importer ces fichiers dans le JKS. ImportKey le fera pour vous, obtenez la source ImportKey.java (text / x-java-source, 6,6 kB, info) ou la clé ImportKey.class compilée (Java 1.5!) et executez 
+ *user@host:~$ java ImportKey key.der cert.der
+Using keystore-file : /home/user/keystore.ImportKey
+One certificate, no chain.
+Key and certificate stored.
+Alias:importkey  Password:importkey*
+sinon pour la deuxieme methode la plus simple vous allez suivre l image precedante vous allez obtenir le meme resultat
+Voila vous disposez maintenant d un certificat electroniques maintenant reste a voir comme l exporter a un client dans notre application de chat / l importer dans notre code .
+Avant de finir je vous recommande fortement d utiliser la methode pem plus difficil mais elle permet de voir la cle public la cle privee et de creer a partir de pkcs12 un keystore
+# facultatif
+Avant de commencer la derniere etape on a etudier le hmac j ai voulu faire l exmple pour savoir sa puissance 
+En cryptographie, un HMAC est un type spécifique de code d'authentification de message impliquant une fonction de hachage cryptographique et une clé cryptographique secrète
+
