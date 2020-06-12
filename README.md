@@ -73,9 +73,9 @@ openssl x509 -in certificatename.cer -outform PEM -out certificatename.pem
 puis pem en pkcs8
 openSSL pkcs8 -in certificatename.pem -topk8 -nocrypt -out certificatename.pk8
 sinon une solution meilleur consiste a generer une cle RSA
-
+![Capture6](https://user-images.githubusercontent.com/47403132/84516734-7edeea00-acce-11ea-8546-318aa598af4d.PNG)
 L'exemple ci−dessus génère une clé RSA de 1024 bits.
 Il faut ensuite convertir la clé RSA au format DER avec PKCS#8.
 
 finalement on peut utiliser le fichier pkcs8 obtenu pour code le message 
-![cap](https://github.com/youssefouajdi/applicationchat-certificat/issues/4#issue-637812954)
+
