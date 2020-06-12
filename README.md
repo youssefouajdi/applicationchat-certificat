@@ -64,3 +64,17 @@ Avant de finir je vous recommande fortement d utiliser la methode pem plus diffi
 Avant de commencer la derniere etape on a etudier le hmac j ai voulu faire l exmple pour savoir sa puissance 
 En cryptographie, un HMAC est un type spécifique de code d'authentification de message impliquant une fonction de hachage cryptographique et une clé cryptographique secrète
 
+
+
+
+# protocole electronique 
+je n ai pas trouver comment passer de certificat x509 a pkcs8 directement mais on peut convertir certificat en pem
+openssl x509 -in certificatename.cer -outform PEM -out certificatename.pem
+puis pem en pkcs8
+openSSL pkcs8 -in certificatename.pem -topk8 -nocrypt -out certificatename.pk8
+sinon une solution meilleur consiste a generer une cle RSA
+
+L'exemple ci−dessus génère une clé RSA de 1024 bits.
+Il faut ensuite convertir la clé RSA au format DER avec PKCS#8.
+
+finalement on peut utiliser le fichier pkcs8 obtenu pour code le message 
