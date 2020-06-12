@@ -78,3 +78,4 @@ L'exemple ci−dessus génère une clé RSA de 1024 bits.
 Il faut ensuite convertir la clé RSA au format DER avec PKCS#8.
 
 finalement on peut utiliser le fichier pkcs8 obtenu pour code le message 
+![cap](https://github.com/youssefouajdi/applicationchat-certificat/issues/4#issue-637812954)
