@@ -82,5 +82,9 @@ finalement on peut utiliser le fichier pkcs8 obtenu pour code le message
 
 
 maitenant on doit integrer le certificat cote server/ client on va proceder de la maniere suivante 
+cote client
 ![Captureclient](https://user-images.githubusercontent.com/47403132/84697654-d25f6b00-af4e-11ea-8488-f5006466ebdb.PNG)
+info cote client 
+![Captureclient](https://user-images.githubusercontent.com/47403132/84697654-d25f6b00-af4e-11ea-8488-f5006466ebdb.PNG)
+
 
