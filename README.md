@@ -66,6 +66,7 @@ En cryptographie, un HMAC est un type spécifique de code d'authentification de 
 Cet exemple de code montre comment calculer un Hmac-Sha256 à partir d'un message et d'une clé secrète (à l'aide de java 12 ou version ultérieure).
 ![CaptureHMAC](https://user-images.githubusercontent.com/47403132/84699994-c4134e00-af52-11ea-97cd-c2064f89c235.PNG)
 Nous pouvons tester la méthode calcHmacSha256 à partir d'une classe principale qui imprime le Hmac à console en tant que chaîne hexadécimale.
+![CaptureMain](https://user-images.githubusercontent.com/47403132/84700291-2ff5b680-af53-11ea-88cc-54ccc496a23d.PNG)
 
 
 # protocole electronique 
