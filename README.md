@@ -86,5 +86,7 @@ cote client
 ![Captureclient](https://user-images.githubusercontent.com/47403132/84697654-d25f6b00-af4e-11ea-8488-f5006466ebdb.PNG)
 info cote client 
 ![Captureclient](https://user-images.githubusercontent.com/47403132/84697654-d25f6b00-af4e-11ea-8488-f5006466ebdb.PNG)
+cote server 
+![Captureserver](https://user-images.githubusercontent.com/47403132/84698040-6e897200-af4f-11ea-9aa6-39679588fa9b.PNG)
 
 
