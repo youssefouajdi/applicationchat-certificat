@@ -68,6 +68,16 @@ Cet exemple de code montre comment calculer un Hmac-Sha256 à partir d'un messag
 Nous pouvons tester la méthode calcHmacSha256 à partir d'une classe principale qui imprime le Hmac à console en tant que chaîne hexadécimale.
 ![CaptureMain](https://user-images.githubusercontent.com/47403132/84700291-2ff5b680-af53-11ea-88cc-54ccc496a23d.PNG)
 
+Le Hmac-Sha256 pour ce message particulier et cette clé secrète est:
+*Hex: 57938295649097379cddb382dd6c82d5e0460645a8fd01674a48a76de6142646*
+
+
+Alors qu'une représentation sous forme de chaîne hexadécimale convient pour le transport d'un Hmac dans un appel de service ou une liaison, une représentation plus efficace est base64. L'extrait de code suivant utilise java.util.Base64.
+__String base64HmacSha256 = Base64.getEncoder().encodeToString(hmacSha256);
+  System.out.println("Base64: " + base64HmacSha256);
+  
+Comme vous pouvez le voir, la chaîne base64 est plus courte.
+*Base64: V5OClWSQlzec3bOC3WyC1eBGBkWo/QFnSkinbeYUJkY=*
 
 # protocole electronique 
 je n ai pas trouver comment passer de certificat x509 a pkcs8 directement mais on peut convertir certificat en pem
