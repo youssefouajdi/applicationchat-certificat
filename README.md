@@ -64,6 +64,8 @@ Avant de finir je vous recommande fortement d utiliser la methode pem plus diffi
 Avant de commencer la derniere etape on a etudier le hmac j ai voulu faire l exmple pour savoir sa puissance 
 En cryptographie, un HMAC est un type spécifique de code d'authentification de message impliquant une fonction de hachage cryptographique et une clé cryptographique secrète
 Cet exemple de code montre comment calculer un Hmac-Sha256 à partir d'un message et d'une clé secrète (à l'aide de java 12 ou version ultérieure).
+![CaptureHMAC](https://user-images.githubusercontent.com/47403132/84699994-c4134e00-af52-11ea-97cd-c2064f89c235.PNG)
+Nous pouvons tester la méthode calcHmacSha256 à partir d'une classe principale qui imprime le Hmac à console en tant que chaîne hexadécimale.
 
 
 # protocole electronique 
