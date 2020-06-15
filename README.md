@@ -78,6 +78,8 @@ L'exemple ci−dessus génère une clé RSA de 1024 bits.
 Il faut ensuite convertir la clé RSA au format DER avec PKCS#8.
 ![Capture7](https://user-images.githubusercontent.com/47403132/84516867-b3eb3c80-acce-11ea-94a9-a9e48de5b57b.PNG)
 finalement on peut utiliser le fichier pkcs8 obtenu pour code le message 
+![Capture+java](https://user-images.githubusercontent.com/47403132/84698570-5108d800-af50-11ea-9886-968b94584963.PNG)
+le code cryptage
 ![Capture8](https://user-images.githubusercontent.com/47403132/84516875-b64d9680-acce-11ea-8d28-2041d4f1cb69.PNG)
 
 
