@@ -79,3 +79,8 @@ Il faut ensuite convertir la clé RSA au format DER avec PKCS#8.
 ![Capture7](https://user-images.githubusercontent.com/47403132/84516867-b3eb3c80-acce-11ea-94a9-a9e48de5b57b.PNG)
 finalement on peut utiliser le fichier pkcs8 obtenu pour code le message 
 ![Capture8](https://user-images.githubusercontent.com/47403132/84516875-b64d9680-acce-11ea-8d28-2041d4f1cb69.PNG)
+
+
+maitenant on doit integrer le certificat cote server/ client on va proceder de la maniere suivante 
+![Captureclient](https://user-images.githubusercontent.com/47403132/84697654-d25f6b00-af4e-11ea-8488-f5006466ebdb.PNG)
+
